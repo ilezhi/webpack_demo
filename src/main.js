@@ -1,1 +1,3 @@
-document.getElementById('box').innerHTML = '<h4>webpack demo</h4>';
+var h = document.createElement('h4');
+h.innerText = '这是main入口文件';
+document.getElementById('box').appendChild(h);
