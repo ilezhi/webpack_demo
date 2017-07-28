@@ -10,10 +10,16 @@ const webpackConfig = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    devServer: {
+        port: 8000,
+        publicPath: '/',
+        hot: true
+    },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()        // enable HMR
     ]
 };
 
