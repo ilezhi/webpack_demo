@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const webpackConfig = {
     entry: {
@@ -38,7 +40,13 @@ const webpackConfig = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
-        new webpack.HotModuleReplacementPlugin()        // enable HMR
+        new webpack.HotModuleReplacementPlugin(),        // enable HMR
+        new HtmlWebpackPlugin({
+            title: 'webpack demo',
+            filename: 'index.html',
+            template: 'index.html'
+        }),
+        new CleanWebpackPlugin(['dist'])
     ]
 };
 
