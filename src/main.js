@@ -1,6 +1,8 @@
 import $ from 'jquery';
-import './assets/css/site.css';
+import 'css/site';
 import icon from './assets/images/circle.png';
+import Home from './components/home/index';
+import tooltip from 'tooltip';
 
 var box = document.getElementById('box');
 var h = document.createElement('h4');
@@ -10,7 +12,12 @@ box.appendChild(h);
 var img = new Image();
 img.src = icon;
 box.appendChild(img);
-
+ 
 var i = document.createElement('i');
 i.innerText = 'autorenew';
 box.appendChild(i);
+
+const home = new Home();
+home.show();
+
+tooltip();
