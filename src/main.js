@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import 'css/site';
-import icon from './assets/images/circle.png';
-import Home from './components/home/index';
-import tooltip from 'tooltip';
+import 'assets/css/site';
+import icon from 'assets/images/circle.png';
+import Home from 'components/home/index';
+import tooltip from 'components/common/tooltip';
 
 var box = document.getElementById('box');
 var h = document.createElement('h4');
